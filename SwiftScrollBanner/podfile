@@ -1,0 +1,5 @@
+target 'SwiftScrollBanner' do
+  use_frameworks!
+  pod 'Kingfisher'
+  pod 'SnapKit'
+end

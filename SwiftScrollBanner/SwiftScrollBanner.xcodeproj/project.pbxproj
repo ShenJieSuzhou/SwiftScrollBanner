@@ -1,0 +1,427 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CD725C31B6E8B8F43352AC61 /* Pods_SwiftScrollBanner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A511454EAAA96E1C123DD99 /* Pods_SwiftScrollBanner.framework */; };
+		E5D8638725BAA52C00A7D455 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D8638625BAA52C00A7D455 /* AppDelegate.swift */; };
+		E5D8638925BAA52C00A7D455 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D8638825BAA52C00A7D455 /* SceneDelegate.swift */; };
+		E5D8638B25BAA52C00A7D455 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D8638A25BAA52C00A7D455 /* ViewController.swift */; };
+		E5D8638E25BAA52C00A7D455 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5D8638C25BAA52C00A7D455 /* Main.storyboard */; };
+		E5D8639025BAA52E00A7D455 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5D8638F25BAA52E00A7D455 /* Assets.xcassets */; };
+		E5D8639325BAA52E00A7D455 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5D8639125BAA52E00A7D455 /* LaunchScreen.storyboard */; };
+		E5D8639D25BAA59500A7D455 /* JJNewsBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D8639B25BAA59500A7D455 /* JJNewsBanner.swift */; };
+		E5D8639E25BAA59500A7D455 /* JJNewsImageViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D8639C25BAA59500A7D455 /* JJNewsImageViewCell.swift */; };
+		E5D863A125BAA8DD00A7D455 /* BannerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D863A025BAA8DD00A7D455 /* BannerModel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2611D60F721F3049411BCB20 /* Pods-SwiftScrollBanner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftScrollBanner.release.xcconfig"; path = "Target Support Files/Pods-SwiftScrollBanner/Pods-SwiftScrollBanner.release.xcconfig"; sourceTree = "<group>"; };
+		5C20E30E54ECCA388EF04388 /* Pods-SwiftScrollBanner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftScrollBanner.debug.xcconfig"; path = "Target Support Files/Pods-SwiftScrollBanner/Pods-SwiftScrollBanner.debug.xcconfig"; sourceTree = "<group>"; };
+		7A511454EAAA96E1C123DD99 /* Pods_SwiftScrollBanner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftScrollBanner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5D8638325BAA52C00A7D455 /* SwiftScrollBanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftScrollBanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5D8638625BAA52C00A7D455 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E5D8638825BAA52C00A7D455 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		E5D8638A25BAA52C00A7D455 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E5D8638D25BAA52C00A7D455 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E5D8638F25BAA52E00A7D455 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E5D8639225BAA52E00A7D455 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E5D8639425BAA52E00A7D455 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E5D8639B25BAA59500A7D455 /* JJNewsBanner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JJNewsBanner.swift; sourceTree = "<group>"; };
+		E5D8639C25BAA59500A7D455 /* JJNewsImageViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JJNewsImageViewCell.swift; sourceTree = "<group>"; };
+		E5D863A025BAA8DD00A7D455 /* BannerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BannerModel.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E5D8638025BAA52C00A7D455 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD725C31B6E8B8F43352AC61 /* Pods_SwiftScrollBanner.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3E6D8A51ABDDC2896D9F5114 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5C20E30E54ECCA388EF04388 /* Pods-SwiftScrollBanner.debug.xcconfig */,
+				2611D60F721F3049411BCB20 /* Pods-SwiftScrollBanner.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		86139A2A2426E1EB0808FCEC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7A511454EAAA96E1C123DD99 /* Pods_SwiftScrollBanner.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E5D8637A25BAA52C00A7D455 = {
+			isa = PBXGroup;
+			children = (
+				E5D8638525BAA52C00A7D455 /* SwiftScrollBanner */,
+				E5D8638425BAA52C00A7D455 /* Products */,
+				3E6D8A51ABDDC2896D9F5114 /* Pods */,
+				86139A2A2426E1EB0808FCEC /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		E5D8638425BAA52C00A7D455 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E5D8638325BAA52C00A7D455 /* SwiftScrollBanner.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E5D8638525BAA52C00A7D455 /* SwiftScrollBanner */ = {
+			isa = PBXGroup;
+			children = (
+				E5D863A025BAA8DD00A7D455 /* BannerModel.swift */,
+				E5D8639B25BAA59500A7D455 /* JJNewsBanner.swift */,
+				E5D8639C25BAA59500A7D455 /* JJNewsImageViewCell.swift */,
+				E5D8638625BAA52C00A7D455 /* AppDelegate.swift */,
+				E5D8638825BAA52C00A7D455 /* SceneDelegate.swift */,
+				E5D8638A25BAA52C00A7D455 /* ViewController.swift */,
+				E5D8638C25BAA52C00A7D455 /* Main.storyboard */,
+				E5D8638F25BAA52E00A7D455 /* Assets.xcassets */,
+				E5D8639125BAA52E00A7D455 /* LaunchScreen.storyboard */,
+				E5D8639425BAA52E00A7D455 /* Info.plist */,
+			);
+			path = SwiftScrollBanner;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E5D8638225BAA52C00A7D455 /* SwiftScrollBanner */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E5D8639725BAA52E00A7D455 /* Build configuration list for PBXNativeTarget "SwiftScrollBanner" */;
+			buildPhases = (
+				B098E783BA881603CD6325C1 /* [CP] Check Pods Manifest.lock */,
+				E5D8637F25BAA52C00A7D455 /* Sources */,
+				E5D8638025BAA52C00A7D455 /* Frameworks */,
+				E5D8638125BAA52C00A7D455 /* Resources */,
+				C60452E2A67CBAC9A0C69C72 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftScrollBanner;
+			productName = SwiftScrollBanner;
+			productReference = E5D8638325BAA52C00A7D455 /* SwiftScrollBanner.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E5D8637B25BAA52C00A7D455 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1230;
+				LastUpgradeCheck = 1230;
+				TargetAttributes = {
+					E5D8638225BAA52C00A7D455 = {
+						CreatedOnToolsVersion = 12.3;
+					};
+				};
+			};
+			buildConfigurationList = E5D8637E25BAA52C00A7D455 /* Build configuration list for PBXProject "SwiftScrollBanner" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E5D8637A25BAA52C00A7D455;
+			productRefGroup = E5D8638425BAA52C00A7D455 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E5D8638225BAA52C00A7D455 /* SwiftScrollBanner */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E5D8638125BAA52C00A7D455 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E5D8639325BAA52E00A7D455 /* LaunchScreen.storyboard in Resources */,
+				E5D8639025BAA52E00A7D455 /* Assets.xcassets in Resources */,
+				E5D8638E25BAA52C00A7D455 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B098E783BA881603CD6325C1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SwiftScrollBanner-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C60452E2A67CBAC9A0C69C72 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SwiftScrollBanner/Pods-SwiftScrollBanner-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SwiftScrollBanner/Pods-SwiftScrollBanner-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SwiftScrollBanner/Pods-SwiftScrollBanner-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E5D8637F25BAA52C00A7D455 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E5D8639D25BAA59500A7D455 /* JJNewsBanner.swift in Sources */,
+				E5D8638B25BAA52C00A7D455 /* ViewController.swift in Sources */,
+				E5D8638725BAA52C00A7D455 /* AppDelegate.swift in Sources */,
+				E5D863A125BAA8DD00A7D455 /* BannerModel.swift in Sources */,
+				E5D8638925BAA52C00A7D455 /* SceneDelegate.swift in Sources */,
+				E5D8639E25BAA59500A7D455 /* JJNewsImageViewCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		E5D8638C25BAA52C00A7D455 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E5D8638D25BAA52C00A7D455 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E5D8639125BAA52E00A7D455 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E5D8639225BAA52E00A7D455 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E5D8639525BAA52E00A7D455 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E5D8639625BAA52E00A7D455 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E5D8639825BAA52E00A7D455 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5C20E30E54ECCA388EF04388 /* Pods-SwiftScrollBanner.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SwiftScrollBanner/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.snailgames.SwiftScrollBanner;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E5D8639925BAA52E00A7D455 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2611D60F721F3049411BCB20 /* Pods-SwiftScrollBanner.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SwiftScrollBanner/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.snailgames.SwiftScrollBanner;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E5D8637E25BAA52C00A7D455 /* Build configuration list for PBXProject "SwiftScrollBanner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E5D8639525BAA52E00A7D455 /* Debug */,
+				E5D8639625BAA52E00A7D455 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E5D8639725BAA52E00A7D455 /* Build configuration list for PBXNativeTarget "SwiftScrollBanner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E5D8639825BAA52E00A7D455 /* Debug */,
+				E5D8639925BAA52E00A7D455 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E5D8637B25BAA52C00A7D455 /* Project object */;
+}
