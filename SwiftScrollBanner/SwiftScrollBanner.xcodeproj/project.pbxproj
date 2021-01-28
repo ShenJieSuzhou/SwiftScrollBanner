@@ -3,11 +3,18 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		CD725C31B6E8B8F43352AC61 /* Pods_SwiftScrollBanner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A511454EAAA96E1C123DD99 /* Pods_SwiftScrollBanner.framework */; };
+		E59CD7E125C2A06F00EAAB44 /* PrivateCustomItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59CD7DD25C2A06F00EAAB44 /* PrivateCustomItem.swift */; };
+		E59CD7E225C2A06F00EAAB44 /* RowStyleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59CD7DE25C2A06F00EAAB44 /* RowStyleView.swift */; };
+		E59CD7E325C2A06F00EAAB44 /* RowStyleLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59CD7DF25C2A06F00EAAB44 /* RowStyleLayout.swift */; };
+		E59CD7E425C2A06F00EAAB44 /* PrivateCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59CD7E025C2A06F00EAAB44 /* PrivateCustomView.swift */; };
+		E59CD7E725C2A0BB00EAAB44 /* PrivateCustomModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59CD7E625C2A0BB00EAAB44 /* PrivateCustomModel.swift */; };
+		E59CD7EA25C2A0F400EAAB44 /* SongModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59CD7E925C2A0F400EAAB44 /* SongModel.swift */; };
+		E59CD7ED25C2A13700EAAB44 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59CD7EC25C2A13700EAAB44 /* UIColorExtension.swift */; };
 		E5D8638725BAA52C00A7D455 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D8638625BAA52C00A7D455 /* AppDelegate.swift */; };
 		E5D8638925BAA52C00A7D455 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D8638825BAA52C00A7D455 /* SceneDelegate.swift */; };
 		E5D8638B25BAA52C00A7D455 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D8638A25BAA52C00A7D455 /* ViewController.swift */; };
@@ -23,6 +30,13 @@
 		2611D60F721F3049411BCB20 /* Pods-SwiftScrollBanner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftScrollBanner.release.xcconfig"; path = "Target Support Files/Pods-SwiftScrollBanner/Pods-SwiftScrollBanner.release.xcconfig"; sourceTree = "<group>"; };
 		5C20E30E54ECCA388EF04388 /* Pods-SwiftScrollBanner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftScrollBanner.debug.xcconfig"; path = "Target Support Files/Pods-SwiftScrollBanner/Pods-SwiftScrollBanner.debug.xcconfig"; sourceTree = "<group>"; };
 		7A511454EAAA96E1C123DD99 /* Pods_SwiftScrollBanner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftScrollBanner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E59CD7DD25C2A06F00EAAB44 /* PrivateCustomItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrivateCustomItem.swift; sourceTree = "<group>"; };
+		E59CD7DE25C2A06F00EAAB44 /* RowStyleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RowStyleView.swift; sourceTree = "<group>"; };
+		E59CD7DF25C2A06F00EAAB44 /* RowStyleLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RowStyleLayout.swift; sourceTree = "<group>"; };
+		E59CD7E025C2A06F00EAAB44 /* PrivateCustomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrivateCustomView.swift; sourceTree = "<group>"; };
+		E59CD7E625C2A0BB00EAAB44 /* PrivateCustomModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrivateCustomModel.swift; sourceTree = "<group>"; };
+		E59CD7E925C2A0F400EAAB44 /* SongModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongModel.swift; sourceTree = "<group>"; };
+		E59CD7EC25C2A13700EAAB44 /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		E5D8638325BAA52C00A7D455 /* SwiftScrollBanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftScrollBanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5D8638625BAA52C00A7D455 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E5D8638825BAA52C00A7D455 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -54,7 +68,6 @@
 				5C20E30E54ECCA388EF04388 /* Pods-SwiftScrollBanner.debug.xcconfig */,
 				2611D60F721F3049411BCB20 /* Pods-SwiftScrollBanner.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -87,6 +100,13 @@
 		E5D8638525BAA52C00A7D455 /* SwiftScrollBanner */ = {
 			isa = PBXGroup;
 			children = (
+				E59CD7EC25C2A13700EAAB44 /* UIColorExtension.swift */,
+				E59CD7E925C2A0F400EAAB44 /* SongModel.swift */,
+				E59CD7E625C2A0BB00EAAB44 /* PrivateCustomModel.swift */,
+				E59CD7DD25C2A06F00EAAB44 /* PrivateCustomItem.swift */,
+				E59CD7E025C2A06F00EAAB44 /* PrivateCustomView.swift */,
+				E59CD7DF25C2A06F00EAAB44 /* RowStyleLayout.swift */,
+				E59CD7DE25C2A06F00EAAB44 /* RowStyleView.swift */,
 				E5D863A025BAA8DD00A7D455 /* BannerModel.swift */,
 				E5D8639B25BAA59500A7D455 /* JJNewsBanner.swift */,
 				E5D8639C25BAA59500A7D455 /* JJNewsImageViewCell.swift */,
@@ -215,10 +235,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E59CD7E725C2A0BB00EAAB44 /* PrivateCustomModel.swift in Sources */,
 				E5D8639D25BAA59500A7D455 /* JJNewsBanner.swift in Sources */,
+				E59CD7E225C2A06F00EAAB44 /* RowStyleView.swift in Sources */,
 				E5D8638B25BAA52C00A7D455 /* ViewController.swift in Sources */,
+				E59CD7E425C2A06F00EAAB44 /* PrivateCustomView.swift in Sources */,
 				E5D8638725BAA52C00A7D455 /* AppDelegate.swift in Sources */,
+				E59CD7ED25C2A13700EAAB44 /* UIColorExtension.swift in Sources */,
+				E59CD7EA25C2A0F400EAAB44 /* SongModel.swift in Sources */,
 				E5D863A125BAA8DD00A7D455 /* BannerModel.swift in Sources */,
+				E59CD7E325C2A06F00EAAB44 /* RowStyleLayout.swift in Sources */,
+				E59CD7E125C2A06F00EAAB44 /* PrivateCustomItem.swift in Sources */,
 				E5D8638925BAA52C00A7D455 /* SceneDelegate.swift in Sources */,
 				E5D8639E25BAA59500A7D455 /* JJNewsImageViewCell.swift in Sources */,
 			);
