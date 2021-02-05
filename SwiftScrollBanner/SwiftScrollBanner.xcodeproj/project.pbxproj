@@ -16,6 +16,7 @@
 		E59CD7EA25C2A0F400EAAB44 /* SongModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59CD7E925C2A0F400EAAB44 /* SongModel.swift */; };
 		E59CD7ED25C2A13700EAAB44 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59CD7EC25C2A13700EAAB44 /* UIColorExtension.swift */; };
 		E59CD81C25CBE5FB00EAAB44 /* SimpleCubeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59CD81B25CBE5FB00EAAB44 /* SimpleCubeViewController.swift */; };
+		E59CD82025CD490200EAAB44 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59CD81F25CD490200EAAB44 /* HomeViewController.swift */; };
 		E5D8638725BAA52C00A7D455 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D8638625BAA52C00A7D455 /* AppDelegate.swift */; };
 		E5D8638925BAA52C00A7D455 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D8638825BAA52C00A7D455 /* SceneDelegate.swift */; };
 		E5D8638B25BAA52C00A7D455 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D8638A25BAA52C00A7D455 /* ViewController.swift */; };
@@ -39,6 +40,7 @@
 		E59CD7E925C2A0F400EAAB44 /* SongModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongModel.swift; sourceTree = "<group>"; };
 		E59CD7EC25C2A13700EAAB44 /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		E59CD81B25CBE5FB00EAAB44 /* SimpleCubeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleCubeViewController.swift; sourceTree = "<group>"; };
+		E59CD81F25CD490200EAAB44 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		E5D8638325BAA52C00A7D455 /* SwiftScrollBanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftScrollBanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5D8638625BAA52C00A7D455 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E5D8638825BAA52C00A7D455 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 				E5D8638F25BAA52E00A7D455 /* Assets.xcassets */,
 				E5D8639125BAA52E00A7D455 /* LaunchScreen.storyboard */,
 				E5D8639425BAA52E00A7D455 /* Info.plist */,
+				E59CD81F25CD490200EAAB44 /* HomeViewController.swift */,
 			);
 			path = SwiftScrollBanner;
 			sourceTree = "<group>";
@@ -251,6 +254,7 @@
 				E59CD7E225C2A06F00EAAB44 /* RowStyleView.swift in Sources */,
 				E59CD81C25CBE5FB00EAAB44 /* SimpleCubeViewController.swift in Sources */,
 				E5D8638B25BAA52C00A7D455 /* ViewController.swift in Sources */,
+				E59CD82025CD490200EAAB44 /* HomeViewController.swift in Sources */,
 				E59CD7E425C2A06F00EAAB44 /* PrivateCustomView.swift in Sources */,
 				E5D8638725BAA52C00A7D455 /* AppDelegate.swift in Sources */,
 				E59CD7ED25C2A13700EAAB44 /* UIColorExtension.swift in Sources */,

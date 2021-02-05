@@ -37,6 +37,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
+        self.navigationController?.isNavigationBarHidden = false
+        
         tableList = UITableView(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: self.view.frame.size.height), style: .plain)
         tableList.register(UITableViewCell.self, forCellReuseIdentifier: "CellID")
         tableList.delegate = self
