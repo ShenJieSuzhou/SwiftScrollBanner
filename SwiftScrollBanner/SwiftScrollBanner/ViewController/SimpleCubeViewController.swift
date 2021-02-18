@@ -13,7 +13,7 @@ class SimpleCubeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.bounds = UIScreen.main.bounds
+        self.title = "SimpleCubeViewController"
         let flowLayout = UICollectionViewFlowLayout()
         flowLayout.scrollDirection = .vertical
         
@@ -48,7 +48,9 @@ extension SimpleCubeViewController: UICollectionViewDataSource {
     // The cell that is returned must be retrieved from a call to -dequeueReusableCellWithReuseIdentifier:forIndexPath:
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell: UICollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "CellID", for: indexPath)
-        cell.backgroundColor = UIColor(red: 10/255, green: 10/255, blue: 10/255, alpha: 1)
+        
+        cell.backgroundColor = UIColor(red:  CGFloat(arc4random()%256)/256.0, green:  CGFloat(arc4random()%256)/256.0, blue:  CGFloat(arc4random()%256)/256.0, alpha: 1)
+       
         return cell
     }
 }

@@ -26,6 +26,7 @@
 		E5D8639D25BAA59500A7D455 /* JJNewsBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D8639B25BAA59500A7D455 /* JJNewsBanner.swift */; };
 		E5D8639E25BAA59500A7D455 /* JJNewsImageViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D8639C25BAA59500A7D455 /* JJNewsImageViewCell.swift */; };
 		E5D863A125BAA8DD00A7D455 /* BannerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D863A025BAA8DD00A7D455 /* BannerModel.swift */; };
+		F45A02DE25DD09060090A084 /* WaterFallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45A02DD25DD09060090A084 /* WaterFallViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		E5D8639B25BAA59500A7D455 /* JJNewsBanner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JJNewsBanner.swift; sourceTree = "<group>"; };
 		E5D8639C25BAA59500A7D455 /* JJNewsImageViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JJNewsImageViewCell.swift; sourceTree = "<group>"; };
 		E5D863A025BAA8DD00A7D455 /* BannerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BannerModel.swift; sourceTree = "<group>"; };
+		F45A02DD25DD09060090A084 /* WaterFallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterFallViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				E59CD81B25CBE5FB00EAAB44 /* SimpleCubeViewController.swift */,
+				F45A02DD25DD09060090A084 /* WaterFallViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -258,6 +261,7 @@
 				E59CD7E425C2A06F00EAAB44 /* PrivateCustomView.swift in Sources */,
 				E5D8638725BAA52C00A7D455 /* AppDelegate.swift in Sources */,
 				E59CD7ED25C2A13700EAAB44 /* UIColorExtension.swift in Sources */,
+				F45A02DE25DD09060090A084 /* WaterFallViewController.swift in Sources */,
 				E59CD7EA25C2A0F400EAAB44 /* SongModel.swift in Sources */,
 				E5D863A125BAA8DD00A7D455 /* BannerModel.swift in Sources */,
 				E59CD7E325C2A06F00EAAB44 /* RowStyleLayout.swift in Sources */,
@@ -411,14 +415,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = WSSN499SLU;
 				INFOPLIST_FILE = SwiftScrollBanner/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.snailgames.SwiftScrollBanner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = UniversalSnailDev;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -430,14 +438,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = WSSN499SLU;
 				INFOPLIST_FILE = SwiftScrollBanner/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.snailgames.SwiftScrollBanner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = UniversalSnailDev;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

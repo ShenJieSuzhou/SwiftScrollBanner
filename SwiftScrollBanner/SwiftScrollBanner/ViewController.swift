@@ -32,13 +32,12 @@ class ViewController: UIViewController {
     private var tableList: UITableView!
     
     private var simpleCubeView: SimpleCubeViewController!
+    private var waterFallView: WaterFallViewController!
    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
-        self.navigationController?.isNavigationBarHidden = false
-        
+                
         tableList = UITableView(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: self.view.frame.size.height), style: .plain)
         tableList.register(UITableViewCell.self, forCellReuseIdentifier: "CellID")
         tableList.delegate = self
@@ -79,10 +78,10 @@ extension ViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if (indexPath.row == 0) {
             simpleCubeView = SimpleCubeViewController()
-            self.present(simpleCubeView, animated: true) {
-                
-            }
-            //self.navigationController?.pushViewController(simpleCubeView, animated: true)
+            self.navigationController?.pushViewController(simpleCubeView, animated: true)
+        } else if indexPath.row == 1 {
+            waterFallView = WaterFallViewController()
+            self.navigationController?.pushViewController(waterFallView, animated: true)
         }
     }
 }
@@ -95,9 +94,9 @@ extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "CellID", for: indexPath)
         if (indexPath.row == 0){
-            cell.textLabel?.text = "效果1"
+            cell.textLabel?.text = "大小方块"
         } else if (indexPath.row == 1){
-            cell.textLabel?.text = "效果2"
+            cell.textLabel?.text = "瀑布流"
         } else {
             cell.textLabel?.text = "其他"
         }
