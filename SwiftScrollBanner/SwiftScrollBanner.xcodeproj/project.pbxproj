@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		CD725C31B6E8B8F43352AC61 /* Pods_SwiftScrollBanner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A511454EAAA96E1C123DD99 /* Pods_SwiftScrollBanner.framework */; };
+		E543692A25DF82920096870E /* BaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E543692925DF82920096870E /* BaseCollectionViewCell.swift */; };
+		E543692F25DF85430096870E /* WaterFallFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = E543692E25DF85430096870E /* WaterFallFlowLayout.swift */; };
 		E59CD7E125C2A06F00EAAB44 /* PrivateCustomItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59CD7DD25C2A06F00EAAB44 /* PrivateCustomItem.swift */; };
 		E59CD7E225C2A06F00EAAB44 /* RowStyleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59CD7DE25C2A06F00EAAB44 /* RowStyleView.swift */; };
 		E59CD7E325C2A06F00EAAB44 /* RowStyleLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59CD7DF25C2A06F00EAAB44 /* RowStyleLayout.swift */; };
@@ -33,6 +35,8 @@
 		2611D60F721F3049411BCB20 /* Pods-SwiftScrollBanner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftScrollBanner.release.xcconfig"; path = "Target Support Files/Pods-SwiftScrollBanner/Pods-SwiftScrollBanner.release.xcconfig"; sourceTree = "<group>"; };
 		5C20E30E54ECCA388EF04388 /* Pods-SwiftScrollBanner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftScrollBanner.debug.xcconfig"; path = "Target Support Files/Pods-SwiftScrollBanner/Pods-SwiftScrollBanner.debug.xcconfig"; sourceTree = "<group>"; };
 		7A511454EAAA96E1C123DD99 /* Pods_SwiftScrollBanner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftScrollBanner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E543692925DF82920096870E /* BaseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewCell.swift; sourceTree = "<group>"; };
+		E543692E25DF85430096870E /* WaterFallFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterFallFlowLayout.swift; sourceTree = "<group>"; };
 		E59CD7DD25C2A06F00EAAB44 /* PrivateCustomItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrivateCustomItem.swift; sourceTree = "<group>"; };
 		E59CD7DE25C2A06F00EAAB44 /* RowStyleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RowStyleView.swift; sourceTree = "<group>"; };
 		E59CD7DF25C2A06F00EAAB44 /* RowStyleLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RowStyleLayout.swift; sourceTree = "<group>"; };
@@ -85,6 +89,22 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		E543692825DF82720096870E /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				E543692925DF82920096870E /* BaseCollectionViewCell.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		E543692D25DF851B0096870E /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				E543692E25DF85430096870E /* WaterFallFlowLayout.swift */,
+			);
+			path = Layout;
+			sourceTree = "<group>";
+		};
 		E59CD81A25CBE5C300EAAB44 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -115,6 +135,8 @@
 		E5D8638525BAA52C00A7D455 /* SwiftScrollBanner */ = {
 			isa = PBXGroup;
 			children = (
+				E543692D25DF851B0096870E /* Layout */,
+				E543692825DF82720096870E /* Base */,
 				E59CD81A25CBE5C300EAAB44 /* ViewController */,
 				E59CD7EC25C2A13700EAAB44 /* UIColorExtension.swift */,
 				E59CD7E925C2A0F400EAAB44 /* SongModel.swift */,
@@ -258,7 +280,9 @@
 				E59CD81C25CBE5FB00EAAB44 /* SimpleCubeViewController.swift in Sources */,
 				E5D8638B25BAA52C00A7D455 /* ViewController.swift in Sources */,
 				E59CD82025CD490200EAAB44 /* HomeViewController.swift in Sources */,
+				E543692F25DF85430096870E /* WaterFallFlowLayout.swift in Sources */,
 				E59CD7E425C2A06F00EAAB44 /* PrivateCustomView.swift in Sources */,
+				E543692A25DF82920096870E /* BaseCollectionViewCell.swift in Sources */,
 				E5D8638725BAA52C00A7D455 /* AppDelegate.swift in Sources */,
 				E59CD7ED25C2A13700EAAB44 /* UIColorExtension.swift in Sources */,
 				F45A02DE25DD09060090A084 /* WaterFallViewController.swift in Sources */,
