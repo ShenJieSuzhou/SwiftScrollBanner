@@ -66,6 +66,7 @@ extension WaterFallFlowLayout {
         return layoutAttributeArray.filter {
             $0.frame.intersects(rect)
         }
+//        return layoutAttributeArray
     }
     
     override var collectionViewContentSize: CGSize {
