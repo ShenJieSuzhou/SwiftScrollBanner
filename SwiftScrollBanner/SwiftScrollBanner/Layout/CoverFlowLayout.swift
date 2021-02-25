@@ -24,7 +24,7 @@ class CoverFlowLayout: UICollectionViewFlowLayout {
         return attributes
     }
         
-    /// 重写滚动时停下的位置
+    /// 滚动时停下的偏移量
     /// - Parameters:
     ///   - proposedContentOffset: 将要停止的点
     ///   - velocity: 滚动速度
@@ -32,7 +32,7 @@ class CoverFlowLayout: UICollectionViewFlowLayout {
     override func targetContentOffset(forProposedContentOffset proposedContentOffset: CGPoint, withScrollingVelocity velocity: CGPoint) -> CGPoint {
         var targetPoint = proposedContentOffset
         // 中心点
-        let centerX = proposedContentOffset.x + collectionView!.bounds.width
+        let centerX = proposedContentOffset.x + collectionView!.bounds.width / 2
         // 获取这个点范围内的布局
         let attrs = self.layoutAttributesForElements(in: CGRect(x: proposedContentOffset.x, y: proposedContentOffset.y, width: collectionView!.bounds.size.width, height: collectionView!.bounds.size.height))
         

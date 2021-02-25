@@ -58,6 +58,7 @@ class CoverFlowViewController: UIViewController {
         
         collectionView = UICollectionView(frame: CGRect(x: 0, y: 180, width: view.bounds.width, height: collH), collectionViewLayout: layout)
         collectionView.backgroundColor = .black
+        collectionView.showsHorizontalScrollIndicator = false
         collectionView.dataSource = self
         collectionView.delegate = self
         
