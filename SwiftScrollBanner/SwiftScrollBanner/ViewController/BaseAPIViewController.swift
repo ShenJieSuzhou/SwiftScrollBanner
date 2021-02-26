@@ -57,4 +57,14 @@ extension BaseAPIViewController: UICollectionViewDataSource {
        
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        
+        switch kind {
+        case UICollectionView.elementKindSectionHeader:
+            case 
+        default:
+            <#code#>
+        }
+    }
 }

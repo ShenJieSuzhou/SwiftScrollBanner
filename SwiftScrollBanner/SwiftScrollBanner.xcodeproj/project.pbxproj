@@ -12,6 +12,9 @@
 		E52664CE25E61D1C00ACE8D9 /* CoverFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52664CD25E61D1C00ACE8D9 /* CoverFlowLayout.swift */; };
 		E52664D125E8CC4900ACE8D9 /* BaseAPIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52664D025E8CC4900ACE8D9 /* BaseAPIViewController.swift */; };
 		E52664D425E8CE4A00ACE8D9 /* BaseAPIFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52664D325E8CE4A00ACE8D9 /* BaseAPIFlowLayout.swift */; };
+		E52664D825E8D6B000ACE8D9 /* DecorationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52664D725E8D6B000ACE8D9 /* DecorationView.swift */; };
+		E52664DE25E8F74F00ACE8D9 /* BaseHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52664DD25E8F74F00ACE8D9 /* BaseHeaderView.swift */; };
+		E52664E125E8F76400ACE8D9 /* BaseFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52664E025E8F76400ACE8D9 /* BaseFooterView.swift */; };
 		E543692A25DF82920096870E /* BaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E543692925DF82920096870E /* BaseCollectionViewCell.swift */; };
 		E543692F25DF85430096870E /* WaterFallFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = E543692E25DF85430096870E /* WaterFallFlowLayout.swift */; };
 		E59CD7E125C2A06F00EAAB44 /* PrivateCustomItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59CD7DD25C2A06F00EAAB44 /* PrivateCustomItem.swift */; };
@@ -43,6 +46,9 @@
 		E52664CD25E61D1C00ACE8D9 /* CoverFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoverFlowLayout.swift; sourceTree = "<group>"; };
 		E52664D025E8CC4900ACE8D9 /* BaseAPIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAPIViewController.swift; sourceTree = "<group>"; };
 		E52664D325E8CE4A00ACE8D9 /* BaseAPIFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAPIFlowLayout.swift; sourceTree = "<group>"; };
+		E52664D725E8D6B000ACE8D9 /* DecorationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecorationView.swift; sourceTree = "<group>"; };
+		E52664DD25E8F74F00ACE8D9 /* BaseHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseHeaderView.swift; sourceTree = "<group>"; };
+		E52664E025E8F76400ACE8D9 /* BaseFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseFooterView.swift; sourceTree = "<group>"; };
 		E543692925DF82920096870E /* BaseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewCell.swift; sourceTree = "<group>"; };
 		E543692E25DF85430096870E /* WaterFallFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterFallFlowLayout.swift; sourceTree = "<group>"; };
 		E59CD7DD25C2A06F00EAAB44 /* PrivateCustomItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrivateCustomItem.swift; sourceTree = "<group>"; };
@@ -97,6 +103,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		E52664D625E8D67B00ACE8D9 /* Subview */ = {
+			isa = PBXGroup;
+			children = (
+				E52664D725E8D6B000ACE8D9 /* DecorationView.swift */,
+				E52664DD25E8F74F00ACE8D9 /* BaseHeaderView.swift */,
+				E52664E025E8F76400ACE8D9 /* BaseFooterView.swift */,
+			);
+			path = Subview;
+			sourceTree = "<group>";
+		};
 		E543692825DF82720096870E /* Base */ = {
 			isa = PBXGroup;
 			children = (
@@ -147,6 +163,7 @@
 		E5D8638525BAA52C00A7D455 /* SwiftScrollBanner */ = {
 			isa = PBXGroup;
 			children = (
+				E52664D625E8D67B00ACE8D9 /* Subview */,
 				E543692D25DF851B0096870E /* Layout */,
 				E543692825DF82720096870E /* Base */,
 				E59CD81A25CBE5C300EAAB44 /* ViewController */,
@@ -289,16 +306,19 @@
 				E59CD7E725C2A0BB00EAAB44 /* PrivateCustomModel.swift in Sources */,
 				E52664D425E8CE4A00ACE8D9 /* BaseAPIFlowLayout.swift in Sources */,
 				E5D8639D25BAA59500A7D455 /* JJNewsBanner.swift in Sources */,
+				E52664D825E8D6B000ACE8D9 /* DecorationView.swift in Sources */,
 				E52664D125E8CC4900ACE8D9 /* BaseAPIViewController.swift in Sources */,
 				E59CD7E225C2A06F00EAAB44 /* RowStyleView.swift in Sources */,
 				E59CD81C25CBE5FB00EAAB44 /* SimpleCubeViewController.swift in Sources */,
 				E5D8638B25BAA52C00A7D455 /* ViewController.swift in Sources */,
 				E59CD82025CD490200EAAB44 /* HomeViewController.swift in Sources */,
 				E543692F25DF85430096870E /* WaterFallFlowLayout.swift in Sources */,
+				E52664E125E8F76400ACE8D9 /* BaseFooterView.swift in Sources */,
 				E52664CB25E504C500ACE8D9 /* CoverFlowViewController.swift in Sources */,
 				E59CD7E425C2A06F00EAAB44 /* PrivateCustomView.swift in Sources */,
 				E543692A25DF82920096870E /* BaseCollectionViewCell.swift in Sources */,
 				E5D8638725BAA52C00A7D455 /* AppDelegate.swift in Sources */,
+				E52664DE25E8F74F00ACE8D9 /* BaseHeaderView.swift in Sources */,
 				E59CD7ED25C2A13700EAAB44 /* UIColorExtension.swift in Sources */,
 				F45A02DE25DD09060090A084 /* WaterFallViewController.swift in Sources */,
 				E59CD7EA25C2A0F400EAAB44 /* SongModel.swift in Sources */,
@@ -487,9 +507,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.snailgames.SwiftScrollBanner;
+				PRODUCT_BUNDLE_IDENTIFIER = com.snailgames.wmsd;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = UniversalSnailDev;
+				PROVISIONING_PROFILE_SPECIFIER = wmsdDev;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
