@@ -34,6 +34,7 @@ class ViewController: UIViewController {
     private var simpleCubeView: SimpleCubeViewController!
     private var waterFallView: WaterFallViewController!
     private var coverFlowView: CoverFlowViewController!
+    private var baseApiView: BaseAPIViewController!
    
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -86,6 +87,9 @@ extension ViewController: UITableViewDelegate {
         } else if indexPath.row == 2 {
             coverFlowView = CoverFlowViewController()
             self.navigationController!.pushViewController(coverFlowView, animated: true)
+        } else if indexPath.row == 3 {
+            baseApiView = BaseAPIViewController()
+            self.navigationController?.pushViewController(baseApiView, animated: true)
         }
     }
 }
@@ -103,6 +107,8 @@ extension ViewController: UITableViewDataSource {
             cell.textLabel?.text = "瀑布流"
         } else if (indexPath.row == 2){
             cell.textLabel?.text = "Cover Flow"
+        } else if (indexPath.row == 3){
+            cell.textLabel?.text = "基础API"
         } else {
             cell.textLabel?.text = "其他"
         }
