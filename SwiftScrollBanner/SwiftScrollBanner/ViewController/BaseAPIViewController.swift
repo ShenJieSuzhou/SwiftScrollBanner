@@ -21,6 +21,9 @@ class BaseAPIViewController: UIViewController {
         
         collectionView = UICollectionView(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: self.view.frame.size.height), collectionViewLayout: flowLayout)
         collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "CellID")
+        collectionView.register(BaseHeaderView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "headerView")
+        collectionView.register(BaseFooterView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: "footerView")
+        
         collectionView.delegate = self
         collectionView.dataSource = self
         self.view.addSubview(collectionView)
@@ -40,6 +43,7 @@ extension BaseAPIViewController: UICollectionViewDelegateFlowLayout {
 }
 
 extension BaseAPIViewController: UICollectionViewDelegate {
+    
     
 }
 
@@ -62,9 +66,20 @@ extension BaseAPIViewController: UICollectionViewDataSource {
         
         switch kind {
         case UICollectionView.elementKindSectionHeader:
-            case 
+            return BaseHeaderView()
+        case UICollectionView.elementKindSectionFooter:
+            return BaseFooterView()
         default:
-            <#code#>
+            return UICollectionReusableView()
         }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
+        
+        return CGSize(width: collectionView.frame.size.width, height: 50)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+        return CGSize(width: collectionView.frame.size.width, height: 50)
     }
 }
