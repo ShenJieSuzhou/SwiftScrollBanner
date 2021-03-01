@@ -33,11 +33,6 @@ class BaseAPIViewController: UIViewController {
 
 extension BaseAPIViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//        if (indexPath.row % 2 == 0) {
-//            return CGSize(width: 50, height: 50)
-//        } else {
-//            return CGSize(width: 100, height: 100)
-//        }
         return CGSize(width: 100, height: 100)
     }
 }
