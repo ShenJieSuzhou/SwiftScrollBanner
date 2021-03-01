@@ -49,7 +49,7 @@ extension BaseAPIViewController: UICollectionViewDelegate {
 
 extension BaseAPIViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 100
+        return 10
     }
 
     
@@ -64,14 +64,15 @@ extension BaseAPIViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         
-        switch kind {
-        case UICollectionView.elementKindSectionHeader:
-            return BaseHeaderView()
-        case UICollectionView.elementKindSectionFooter:
-            return BaseFooterView()
-        default:
-            return UICollectionReusableView()
+        if kind == UICollectionView.elementKindSectionHeader {
+            let headerView: BaseHeaderView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "headerView", for: indexPath) as! BaseHeaderView
+            return headerView
+        } else if kind == UICollectionView.elementKindSectionFooter {
+            let footerView: BaseFooterView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: "footerView", for: indexPath) as! BaseFooterView
+            return footerView
         }
+        
+        return UICollectionReusableView()
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
