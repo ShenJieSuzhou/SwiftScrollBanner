@@ -22,13 +22,13 @@ class DecorationView: UICollectionReusableView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        dcv.frame = self.bounds
-    }
-    
-    override func apply(_ layoutAttributes: UICollectionViewLayoutAttributes) {
-        super.apply(layoutAttributes)
-        
-    }
+//    override func layoutSubviews() {
+//        super.layoutSubviews()
+//        dcv.frame = self.bounds
+//    }
+//    
+//    override func apply(_ layoutAttributes: UICollectionViewLayoutAttributes) {
+//        super.apply(layoutAttributes)
+//        
+//    }
 }
