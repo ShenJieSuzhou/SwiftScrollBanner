@@ -108,7 +108,7 @@ extension ViewController: UITableViewDataSource {
         } else if (indexPath.row == 2){
             cell.textLabel?.text = "Cover Flow"
         } else if (indexPath.row == 3){
-            cell.textLabel?.text = "基础API"
+            cell.textLabel?.text = "追加视图和装饰视图"
         } else {
             cell.textLabel?.text = "其他"
         }
