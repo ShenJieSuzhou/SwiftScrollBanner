@@ -54,7 +54,7 @@ extension WaterFallViewController: UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellID, for: indexPath) as! BaseCollectionViewCell
         cell.cellIndex = indexPath.item
-        cell.backgroundColor = indexPath.item % 2 == 0 ? .purple : .lightGray
+        cell.backgroundColor = indexPath.item % 2 == 0 ? .systemBlue : .purple
         if itemCount - 1 == indexPath.item {
             itemCount += 20
             collectionView.reloadData()
