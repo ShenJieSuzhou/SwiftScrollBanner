@@ -41,13 +41,13 @@ class CoverFlowViewController: UIViewController {
     func setUpView() {
         // 初始化 flowlayout
         let layout = CoverFlowLayout()
-        let margin: CGFloat = 40
+        let margin: CGFloat = 20
         let collH: CGFloat = 200
         let itemH = collH - margin * 2
-        let itemW = (view.bounds.width - margin * 4) / 3
+        let itemW = view.bounds.width - margin * 2 - 100
         layout.itemSize = CGSize(width: itemW, height: itemH)
-        layout.minimumLineSpacing = margin
-        layout.minimumInteritemSpacing = margin
+        layout.minimumLineSpacing = 5
+        layout.minimumInteritemSpacing = 5
         layout.sectionInset = UIEdgeInsets(top: 0, left: margin, bottom: 0, right: margin)
         layout.scrollDirection = .horizontal
         
@@ -80,7 +80,7 @@ extension CoverFlowViewController: UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellID, for: indexPath) as! BaseCollectionViewCell
         cell.cellIndex = indexPath.item
-        cell.backgroundColor = indexPath.item % 2 == 0 ? .purple : .lightGray
+        cell.backgroundColor = indexPath.item % 2 == 0 ? .purple : .red
 
         return cell
     }

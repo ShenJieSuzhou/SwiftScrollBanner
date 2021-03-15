@@ -20,6 +20,7 @@ class BaseCollectionViewCell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
         textLabel = UILabel()
+        textLabel.font = UIFont.systemFont(ofSize: 30)
         textLabel.textAlignment = .center
         contentView.addSubview(textLabel)
         backgroundColor = .orange
