@@ -10,16 +10,11 @@ import UIKit
 class CoverFlowViewController: UIViewController {
 
     private let cellID = "baseCellID"
-    
-    var itemCount: Int = 30
     var collectionView: UICollectionView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-//        view.backgroundColor = .white
-//        automaticallyAdjustsScrollViewInsets = false
-//        contentInsetAdjustmentBehavior = false
         setUpView()
     }
     
@@ -29,8 +24,10 @@ class CoverFlowViewController: UIViewController {
     }
     
     fileprivate func bringMiddleCellToFront() {
+        // 找到居中 Cell 的 Center 坐标
         let pointX = (collectionView.contentOffset.x + collectionView.bounds.width / 2)
         let point = CGPoint(x: pointX, y: collectionView.bounds.height / 2)
+        // 根据坐标获取 indexPath
         let indexPath = collectionView.indexPathForItem(at: point)
         if let indexPathCopy = indexPath {
             let cell = collectionView.cellForItem(at: indexPathCopy)
@@ -42,10 +39,8 @@ class CoverFlowViewController: UIViewController {
     }
     
     func setUpView() {
-        // 设置 flowlayout
+        // 初始化 flowlayout
         let layout = CoverFlowLayout()
-        
-        // 设置 collectionview
         let margin: CGFloat = 40
         let collH: CGFloat = 200
         let itemH = collH - margin * 2
@@ -56,6 +51,7 @@ class CoverFlowViewController: UIViewController {
         layout.sectionInset = UIEdgeInsets(top: 0, left: margin, bottom: 0, right: margin)
         layout.scrollDirection = .horizontal
         
+        // 初始化 collectionview
         collectionView = UICollectionView(frame: CGRect(x: 0, y: 180, width: view.bounds.width, height: collH), collectionViewLayout: layout)
         collectionView.backgroundColor = .black
         collectionView.showsHorizontalScrollIndicator = false
@@ -70,6 +66,7 @@ class CoverFlowViewController: UIViewController {
 
 extension CoverFlowViewController: UICollectionViewDelegate{
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        
         bringMiddleCellToFront()
     }
 }
@@ -84,10 +81,7 @@ extension CoverFlowViewController: UICollectionViewDataSource{
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellID, for: indexPath) as! BaseCollectionViewCell
         cell.cellIndex = indexPath.item
         cell.backgroundColor = indexPath.item % 2 == 0 ? .purple : .lightGray
-//        if itemCount - 1 == indexPath.item {
-//            itemCount += 20
-//            collectionView.reloadData()
-//        }
+
         return cell
     }
 }

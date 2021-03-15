@@ -66,6 +66,7 @@ class WaterFallFlowLayout: UICollectionViewFlowLayout {
 extension WaterFallFlowLayout {
     
     override func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
+        // 返回相交的区域
         return layoutAttributeArray.filter {
             $0.frame.intersects(rect)
         }
