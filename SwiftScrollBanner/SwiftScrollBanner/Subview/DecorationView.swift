@@ -14,7 +14,7 @@ class DecorationView: UICollectionReusableView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         dcv = UIImageView(frame: frame)
-        dcv.image = UIImage(named: "123")
+        dcv.image = UIImage(named: "bookshelf")
         self.addSubview(dcv)
     }
     
