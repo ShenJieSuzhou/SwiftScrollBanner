@@ -30,25 +30,9 @@
             filePath = "SwiftScrollBanner/Layout/BaseAPIFlowLayout.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "45"
-            endingLineNumber = "45"
+            startingLineNumber = "99"
+            endingLineNumber = "99"
             landmarkName = "layoutAttributesForElements(in:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "861DC0AE-33A8-483F-A0CA-DB0CDA488763"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SwiftScrollBanner/Layout/BaseAPIFlowLayout.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "58"
-            endingLineNumber = "58"
-            landmarkName = "layoutAttributesForDecorationView(ofKind:at:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

@@ -20,22 +20,6 @@ class CoverFlowViewController: UIViewController {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        bringMiddleCellToFront()
-    }
-    
-    fileprivate func bringMiddleCellToFront() {
-        // 找到居中 Cell 的 Center 坐标
-        let pointX = (collectionView.contentOffset.x + collectionView.bounds.width / 2)
-        let point = CGPoint(x: pointX, y: collectionView.bounds.height / 2)
-        // 根据坐标获取 indexPath
-        let indexPath = collectionView.indexPathForItem(at: point)
-        if let indexPathCopy = indexPath {
-            let cell = collectionView.cellForItem(at: indexPathCopy)
-            guard let cellCopy = cell else {
-                return
-            }
-            collectionView.bringSubviewToFront(cellCopy)
-        }
     }
     
     func setUpView() {
@@ -66,8 +50,7 @@ class CoverFlowViewController: UIViewController {
 
 extension CoverFlowViewController: UICollectionViewDelegate{
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        
-        bringMiddleCellToFront()
+
     }
 }
 
