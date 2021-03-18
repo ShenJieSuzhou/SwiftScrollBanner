@@ -35,7 +35,34 @@ class BaseAPIViewController: UIViewController {
         collectionView.delegate = self
         collectionView.dataSource = self
         self.view.addSubview(collectionView)
+        
+        // 添加手势
+        let longPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(handleLongGesture(_:)))
+        collectionView.addGestureRecognizer(longPressGesture)
     }
+    
+    @objc func handleLongGesture(_ gesture: UILongPressGestureRecognizer) {
+        
+        switch(gesture.state) {
+            
+        case .began:
+            guard let selectedIndexPath = self.collectionView.indexPathForItem(at: gesture.location(in: self.collectionView)) else {
+                break
+            }
+            // 开始交互
+            collectionView.beginInteractiveMovementForItem(at: selectedIndexPath)
+        case .changed:
+            // 更新位置
+            collectionView.updateInteractiveMovementTargetPosition(gesture.location(in: gesture.view!))
+        case .ended:
+            // 结束交互
+            collectionView.endInteractiveMovement()
+        default:
+            // 默认取消交互
+            collectionView.cancelInteractiveMovement()
+        }
+    }
+    
 }
 
 
@@ -91,6 +118,10 @@ extension BaseAPIViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
 //        return CGSize(width: collectionView.frame.size.width, height: 100)
         return CGSize(width: 100, height: 50);
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, moveItemAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        
     }
 }
 
