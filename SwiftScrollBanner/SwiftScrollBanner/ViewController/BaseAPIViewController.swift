@@ -25,8 +25,11 @@ class BaseAPIViewController: UIViewController {
         flowLayout.scrollDirection = .vertical
         
         collectionView = UICollectionView(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: self.view.frame.size.height), collectionViewLayout: flowLayout)
+        // 注册 UICollectionViewCell
         collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "CellID")
+        // 注册头部视图
         collectionView.register(BaseHeaderView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "headerView")
+        // 注册尾部视图
         collectionView.register(BaseFooterView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: "footerView")
         
         collectionView.delegate = self
@@ -43,8 +46,9 @@ extension BaseAPIViewController: UICollectionViewDelegateFlowLayout {
 }
 
 extension BaseAPIViewController: UICollectionViewDelegate {
-    
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+    }
 }
 
 extension BaseAPIViewController: UICollectionViewDataSource {
@@ -66,7 +70,7 @@ extension BaseAPIViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        
+
         if kind == UICollectionView.elementKindSectionHeader {
             let headerView: BaseHeaderView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "headerView", for: indexPath) as! BaseHeaderView
             return headerView
@@ -74,18 +78,19 @@ extension BaseAPIViewController: UICollectionViewDataSource {
             let footerView: BaseFooterView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: "footerView", for: indexPath) as! BaseFooterView
             return footerView
         }
-        
+
         return UICollectionReusableView()
     }
     
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
-//
-////        return CGSize(width: collectionView.frame.size.width, height: 100)
-//        return CGSize(width: 1, height: 1);
-//    }
-//
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-////        return CGSize(width: collectionView.frame.size.width, height: 100)
-//        return CGSize(width: 1, height: 1);
-//    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
+
+//        return CGSize(width: collectionView.frame.size.width, height: 100)
+        return CGSize(width: 100, height: 50);
+    }
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+//        return CGSize(width: collectionView.frame.size.width, height: 100)
+        return CGSize(width: 100, height: 50);
+    }
 }
+
