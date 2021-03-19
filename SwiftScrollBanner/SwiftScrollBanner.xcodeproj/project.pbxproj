@@ -35,6 +35,7 @@
 		E5D8639D25BAA59500A7D455 /* JJNewsBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D8639B25BAA59500A7D455 /* JJNewsBanner.swift */; };
 		E5D8639E25BAA59500A7D455 /* JJNewsImageViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D8639C25BAA59500A7D455 /* JJNewsImageViewCell.swift */; };
 		E5D863A125BAA8DD00A7D455 /* BannerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D863A025BAA8DD00A7D455 /* BannerModel.swift */; };
+		E5D9E10B260454030054280A /* BookCoverCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D9E10A260454030054280A /* BookCoverCell.swift */; };
 		F45A02DE25DD09060090A084 /* WaterFallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45A02DD25DD09060090A084 /* WaterFallViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -71,6 +72,7 @@
 		E5D8639B25BAA59500A7D455 /* JJNewsBanner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JJNewsBanner.swift; sourceTree = "<group>"; };
 		E5D8639C25BAA59500A7D455 /* JJNewsImageViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JJNewsImageViewCell.swift; sourceTree = "<group>"; };
 		E5D863A025BAA8DD00A7D455 /* BannerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BannerModel.swift; sourceTree = "<group>"; };
+		E5D9E10A260454030054280A /* BookCoverCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCoverCell.swift; sourceTree = "<group>"; };
 		F45A02DD25DD09060090A084 /* WaterFallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterFallViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -117,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				E543692925DF82920096870E /* BaseCollectionViewCell.swift */,
+				E5D9E10A260454030054280A /* BookCoverCell.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -305,6 +308,7 @@
 			files = (
 				E59CD7E725C2A0BB00EAAB44 /* PrivateCustomModel.swift in Sources */,
 				E52664D425E8CE4A00ACE8D9 /* BaseAPIFlowLayout.swift in Sources */,
+				E5D9E10B260454030054280A /* BookCoverCell.swift in Sources */,
 				E5D8639D25BAA59500A7D455 /* JJNewsBanner.swift in Sources */,
 				E52664D825E8D6B000ACE8D9 /* DecorationView.swift in Sources */,
 				E52664D125E8CC4900ACE8D9 /* BaseAPIViewController.swift in Sources */,

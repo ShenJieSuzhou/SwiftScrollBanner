@@ -10,12 +10,19 @@ import UIKit
 class BaseAPIViewController: UIViewController {
 
     private var collectionView: UICollectionView!
+    private let maxNum:Int = 4
+    private var mockData = [[String]]()
+    private var prevIndexPath:IndexPath!
+        //= Array(arrayLiteral: ["1","2","3"],["4","5","6","7"],["8","9","10"],["11","22","33"],["44","55"],["66","77","88","99"],["100","11"])
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         self.title = "Book Shelf"
+        mockData = [["1","2","3"],["4","5","6","7"],["8","9","10"],["11","22","33"],["44","55"],["66","77","88","99"],["100","11"]]
+        
+        
         let flowLayout = BaseAPIFlowLayout()
         let margin: CGFloat = 20
         let section: CGFloat = 15
@@ -26,7 +33,7 @@ class BaseAPIViewController: UIViewController {
         
         collectionView = UICollectionView(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: self.view.frame.size.height), collectionViewLayout: flowLayout)
         // 注册 UICollectionViewCell
-        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "CellID")
+        collectionView.register(BookCoverCell.self, forCellWithReuseIdentifier: "CellID")
         // 注册头部视图
         collectionView.register(BaseHeaderView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "headerView")
         // 注册尾部视图
@@ -44,22 +51,37 @@ class BaseAPIViewController: UIViewController {
     @objc func handleLongGesture(_ gesture: UILongPressGestureRecognizer) {
         
         switch(gesture.state) {
-            
-        case .began:
-            guard let selectedIndexPath = self.collectionView.indexPathForItem(at: gesture.location(in: self.collectionView)) else {
-                break
-            }
-            // 开始交互
-            collectionView.beginInteractiveMovementForItem(at: selectedIndexPath)
-        case .changed:
-            // 更新位置
-            collectionView.updateInteractiveMovementTargetPosition(gesture.location(in: gesture.view!))
-        case .ended:
-            // 结束交互
-            collectionView.endInteractiveMovement()
-        default:
-            // 默认取消交互
-            collectionView.cancelInteractiveMovement()
+            case .began:
+                guard let selectedIndexPath = self.collectionView.indexPathForItem(at: gesture.location(in: self.collectionView)) else {
+                    break
+                }
+                prevIndexPath = selectedIndexPath
+                // 开始交互
+                collectionView.beginInteractiveMovementForItem(at: selectedIndexPath)
+            case .changed:
+                // 更新位置
+                if let moveIndexpath:IndexPath = self.collectionView.indexPathForItem(at: gesture.location(in: self.collectionView)) {
+                    if prevIndexPath == moveIndexpath {
+                        collectionView.updateInteractiveMovementTargetPosition(gesture.location(in: gesture.view!))
+                    } else {
+                        // 判断书架是否放满
+                        if collectionView.numberOfItems(inSection: moveIndexpath.section) < 4 {
+                            collectionView.updateInteractiveMovementTargetPosition(gesture.location(in: gesture.view!))
+                        } else {
+                            break
+                        }
+                        
+//                        collectionView.endInteractiveMovement()
+//                        collectionView.beginInteractiveMovementForItem(at: moveIndexpath)
+                       
+                    }
+                }
+            case .ended:
+                // 结束交互
+                collectionView.endInteractiveMovement()
+            default:
+                // 默认取消交互
+                collectionView.cancelInteractiveMovement()
         }
     }
     
@@ -79,20 +101,21 @@ extension BaseAPIViewController: UICollectionViewDelegate {
 }
 
 extension BaseAPIViewController: UICollectionViewDataSource {
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
+        return mockData[section].count
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 6
+        return mockData.count
     }
 
     
     // The cell that is returned must be retrieved from a call to -dequeueReusableCellWithReuseIdentifier:forIndexPath:
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell: UICollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "CellID", for: indexPath)
-        cell.backgroundColor = UIColor(red:  CGFloat(arc4random()%256)/256.0, green:  CGFloat(arc4random()%256)/256.0, blue:  CGFloat(arc4random()%256)/256.0, alpha: 1)
         
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CellID", for: indexPath) as! BookCoverCell
+        cell.imageNmae = mockData[indexPath.section][indexPath.row]
         return cell
     }
     
@@ -109,19 +132,58 @@ extension BaseAPIViewController: UICollectionViewDataSource {
         return UICollectionReusableView()
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
-
-//        return CGSize(width: collectionView.frame.size.width, height: 100)
-        return CGSize(width: 100, height: 50);
-    }
-
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-//        return CGSize(width: collectionView.frame.size.width, height: 100)
-        return CGSize(width: 100, height: 50);
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
+//
+////        return CGSize(width: collectionView.frame.size.width, height: 100)
+//        return CGSize(width: 100, height: 50);
+//    }
+//
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+////        return CGSize(width: collectionView.frame.size.width, height: 100)
+//        return CGSize(width: 100, height: 50);
+//    }
+    
+    func collectionView(_ collectionView: UICollectionView, canMoveItemAt indexPath: IndexPath) -> Bool {
+        return true
     }
     
     func collectionView(_ collectionView: UICollectionView, moveItemAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
-        
+        let book = mockData[sourceIndexPath.section].remove(at: sourceIndexPath.row)
+        mockData[destinationIndexPath.section].insert(book, at: (destinationIndexPath as NSIndexPath).row)
     }
 }
+
+//extension BaseAPIViewController: UICollectionViewDragDelegate {
+//
+//    func collectionView(_ collectionView: UICollectionView, itemsForBeginning session: UIDragSession, at indexPath: IndexPath) -> [UIDragItem] {
+//
+//    }
+//
+//    func collectionView(_ collectionView: UICollectionView, itemsForAddingTo session: UIDragSession, at indexPath: IndexPath, point: CGPoint) -> [UIDragItem] {
+//
+//    }
+//
+//    func collectionView(_ collectionView: UICollectionView, dragSessionWillBegin session: UIDragSession) {
+//
+//    }
+//
+//    func collectionView(_ collectionView: UICollectionView, dragSessionDidEnd session: UIDragSession) {
+//
+//    }
+//}
+//
+//extension BaseAPIViewController: UICollectionViewDropDelegate {
+//
+//    func collectionView(_ collectionView: UICollectionView, performDropWith coordinator: UICollectionViewDropCoordinator) {
+//
+//    }
+//
+//    func collectionView(_ collectionView: UICollectionView, canHandle session: UIDropSession) -> Bool {
+//
+//    }
+//
+//    func collectionView(_ collectionView: UICollectionView, dropSessionDidUpdate session: UIDropSession, withDestinationIndexPath destinationIndexPath: IndexPath?) -> UICollectionViewDropProposal {
+//
+//    }
+//}
 
