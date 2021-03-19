@@ -13,7 +13,6 @@ class BaseAPIViewController: UIViewController {
     private let maxNum:Int = 4
     private var mockData = [[String]]()
     private var prevIndexPath:IndexPath!
-        //= Array(arrayLiteral: ["1","2","3"],["4","5","6","7"],["8","9","10"],["11","22","33"],["44","55"],["66","77","88","99"],["100","11"])
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,20 +59,16 @@ class BaseAPIViewController: UIViewController {
                 collectionView.beginInteractiveMovementForItem(at: selectedIndexPath)
             case .changed:
                 // 更新位置
-                if let moveIndexpath:IndexPath = self.collectionView.indexPathForItem(at: gesture.location(in: self.collectionView)) {
-                    if prevIndexPath == moveIndexpath {
+                if let moveIndexPath:IndexPath = self.collectionView.indexPathForItem(at: gesture.location(in: self.collectionView)) {
+                    if prevIndexPath == moveIndexPath {
                         collectionView.updateInteractiveMovementTargetPosition(gesture.location(in: gesture.view!))
                     } else {
                         // 判断书架是否放满
-                        if collectionView.numberOfItems(inSection: moveIndexpath.section) < 4 {
+                        if collectionView.numberOfItems(inSection: moveIndexPath.section) < 4 {
                             collectionView.updateInteractiveMovementTargetPosition(gesture.location(in: gesture.view!))
                         } else {
                             break
                         }
-                        
-//                        collectionView.endInteractiveMovement()
-//                        collectionView.beginInteractiveMovementForItem(at: moveIndexpath)
-                       
                     }
                 }
             case .ended:
