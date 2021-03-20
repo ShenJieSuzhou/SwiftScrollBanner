@@ -77,36 +77,8 @@ class BaseAPIFlowLayout: UICollectionViewFlowLayout {
         attrs!.append(contentsOf: self.sectionAttrs.filter {
               return rect.intersects($0.frame)
           })
-        
-//        var newAttrs:[UICollectionViewLayoutAttributes] = []
-//
-//        attrs!.forEach({ (attr) in
-//            if attr.representedElementKind == UICollectionView.elementKindSectionHeader {
-//                let attr1 = self.layoutAttributesForSupplementaryView(ofKind:UICollectionView.elementKindSectionHeader, at: attr.indexPath)
-//                newAttrs.append(attr1!)
-//            } else if attr.representedElementKind == UICollectionView.elementKindSectionFooter {
-//                let attr2 = self.layoutAttributesForSupplementaryView(ofKind:UICollectionView.elementKindSectionFooter, at: attr.indexPath)
-//                newAttrs.append(attr2!)
-//            } else {
-//                newAttrs.append(attr)
-//            }
-//        })
-    
+            
         return attrs
-        
-//        let attributes = super.layoutAttributesForElements(in: rect)
-
-//        attributes!.forEach({ (attr) in
-//            let decorations = self.layoutAttributesForDecorationView(ofKind: "DecorationView", at: attr.indexPath)
-//            if let decorate = decorations, rect.intersects(decorate.frame){
-//                newAttrs.append(decorate)
-//            }
-//        })
-//        return newAttrs;
-//        attributes?.append(contentsOf: self.sectionAttrs.values.filter{
-//            return rect.intersects($0.frame)
-//        })
-//        var newAttrs = [UICollectionViewLayoutAttributes]()
     }
     
 
@@ -121,17 +93,7 @@ class BaseAPIFlowLayout: UICollectionViewFlowLayout {
     }
 
     override func layoutAttributesForSupplementaryView(ofKind elementKind: String, at indexPath: IndexPath) -> UICollectionViewLayoutAttributes? {
-        let attributes = super.layoutAttributesForSupplementaryView(ofKind: elementKind, at: indexPath)
-//        if elementKind == UICollectionView.elementKindSectionHeader {
-//           attributes?.size = CGSize(width: CGFloat(attributes!.frame.size.width), height: 10)
-//        } else if elementKind == UICollectionView.elementKindSectionFooter {
-//            attributes?.size = CGSize(width: CGFloat(attributes!.frame.size.width), height: 10)
-//        }
-        return attributes
+        return super.layoutAttributesForSupplementaryView(ofKind: elementKind, at: indexPath)
     }
-    
-//    override func shouldInvalidateLayout(forBoundsChange newBounds: CGRect) -> Bool {
-//        return true
-//    }
 }
 

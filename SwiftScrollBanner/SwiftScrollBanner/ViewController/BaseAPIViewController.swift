@@ -9,14 +9,13 @@ import UIKit
 
 class BaseAPIViewController: UIViewController {
 
-    private var collectionView: UICollectionView!
+    fileprivate var collectionView: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         self.title = "SupplementaryView"
-        
         
         let flowLayout = UICollectionViewFlowLayout()
         let margin: CGFloat = 20
@@ -29,7 +28,7 @@ class BaseAPIViewController: UIViewController {
         flowLayout.sectionFootersPinToVisibleBounds = true
         
         collectionView = UICollectionView(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: self.view.frame.size.height), collectionViewLayout: flowLayout)
-        // 注册 UICollectionViewCell
+        // 注册 Cell
         collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "CellID")
         // 注册头部视图
         collectionView.register(BaseHeaderView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "headerView")
@@ -45,6 +44,7 @@ class BaseAPIViewController: UIViewController {
 
 extension BaseAPIViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        // 返回 cell 尺寸
         return CGSize(width: 80, height: 120)
     }
 }
@@ -74,6 +74,7 @@ extension BaseAPIViewController: UICollectionViewDataSource {
         return cell
     }
     
+    // 返回追加视图对象，供 UICollectionView 加载
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
 
         if kind == UICollectionView.elementKindSectionHeader {
@@ -87,10 +88,12 @@ extension BaseAPIViewController: UICollectionViewDataSource {
         return UICollectionReusableView()
     }
     
+    // 返回追加视图尺寸
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
         return CGSize(width: collectionView.frame.size.width, height: 50)
     }
 
+    // 返回
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
         return CGSize(width: collectionView.frame.size.width, height: 50)
     }

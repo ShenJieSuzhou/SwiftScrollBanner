@@ -33,10 +33,6 @@ class BookShelfViewController: UIViewController {
         collectionView = UICollectionView(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: self.view.frame.size.height), collectionViewLayout: flowLayout)
         // 注册 UICollectionViewCell
         collectionView.register(BookCoverCell.self, forCellWithReuseIdentifier: "CellID")
-        // 注册头部视图
-        collectionView.register(BaseHeaderView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "headerView")
-        // 注册尾部视图
-        collectionView.register(BaseFooterView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: "footerView")
         
         collectionView.delegate = self
         collectionView.dataSource = self
@@ -114,18 +110,18 @@ extension BookShelfViewController: UICollectionViewDataSource {
         return cell
     }
     
-    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-
-        if kind == UICollectionView.elementKindSectionHeader {
-            let headerView: BaseHeaderView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "headerView", for: indexPath) as! BaseHeaderView
-            return headerView
-        } else if kind == UICollectionView.elementKindSectionFooter {
-            let footerView: BaseFooterView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: "footerView", for: indexPath) as! BaseFooterView
-            return footerView
-        }
-
-        return UICollectionReusableView()
-    }
+//    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+//
+//        if kind == UICollectionView.elementKindSectionHeader {
+//            let headerView: BaseHeaderView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "headerView", for: indexPath) as! BaseHeaderView
+//            return headerView
+//        } else if kind == UICollectionView.elementKindSectionFooter {
+//            let footerView: BaseFooterView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: "footerView", for: indexPath) as! BaseFooterView
+//            return footerView
+//        }
+//
+//        return UICollectionReusableView()
+//    }
     
     func collectionView(_ collectionView: UICollectionView, canMoveItemAt indexPath: IndexPath) -> Bool {
         return true
