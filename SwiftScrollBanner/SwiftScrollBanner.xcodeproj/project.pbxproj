@@ -37,6 +37,7 @@
 		E5D863A125BAA8DD00A7D455 /* BannerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D863A025BAA8DD00A7D455 /* BannerModel.swift */; };
 		E5D9E10B260454030054280A /* BookCoverCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D9E10A260454030054280A /* BookCoverCell.swift */; };
 		F45A02DE25DD09060090A084 /* WaterFallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45A02DD25DD09060090A084 /* WaterFallViewController.swift */; };
+		F47BE5332605C9F600C6DD7F /* BookShelfViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47BE5322605C9F600C6DD7F /* BookShelfViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +75,7 @@
 		E5D863A025BAA8DD00A7D455 /* BannerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BannerModel.swift; sourceTree = "<group>"; };
 		E5D9E10A260454030054280A /* BookCoverCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCoverCell.swift; sourceTree = "<group>"; };
 		F45A02DD25DD09060090A084 /* WaterFallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterFallViewController.swift; sourceTree = "<group>"; };
+		F47BE5322605C9F600C6DD7F /* BookShelfViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookShelfViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +143,7 @@
 				F45A02DD25DD09060090A084 /* WaterFallViewController.swift */,
 				E52664CA25E504C500ACE8D9 /* CoverFlowViewController.swift */,
 				E52664D025E8CC4900ACE8D9 /* BaseAPIViewController.swift */,
+				F47BE5322605C9F600C6DD7F /* BookShelfViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -316,6 +319,7 @@
 				E59CD81C25CBE5FB00EAAB44 /* SimpleCubeViewController.swift in Sources */,
 				E5D8638B25BAA52C00A7D455 /* ViewController.swift in Sources */,
 				E59CD82025CD490200EAAB44 /* HomeViewController.swift in Sources */,
+				F47BE5332605C9F600C6DD7F /* BookShelfViewController.swift in Sources */,
 				E543692F25DF85430096870E /* WaterFallFlowLayout.swift in Sources */,
 				E52664E125E8F76400ACE8D9 /* BaseFooterView.swift in Sources */,
 				E52664CB25E504C500ACE8D9 /* CoverFlowViewController.swift in Sources */,

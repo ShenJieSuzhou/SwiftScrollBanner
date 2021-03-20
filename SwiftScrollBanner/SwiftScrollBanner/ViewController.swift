@@ -35,6 +35,7 @@ class ViewController: UIViewController {
     private var waterFallView: WaterFallViewController!
     private var coverFlowView: CoverFlowViewController!
     private var baseApiView: BaseAPIViewController!
+    private var bookShelfView: BookShelfViewController!
    
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -90,6 +91,9 @@ extension ViewController: UITableViewDelegate {
         } else if indexPath.row == 3 {
             baseApiView = BaseAPIViewController()
             self.navigationController?.pushViewController(baseApiView, animated: true)
+        } else if indexPath.row == 4 {
+            bookShelfView = BookShelfViewController()
+            self.navigationController?.pushViewController(bookShelfView, animated: true)
         }
     }
 }
@@ -101,14 +105,16 @@ extension ViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "CellID", for: indexPath)
-        if (indexPath.row == 0){
+        if indexPath.row == 0 {
             cell.textLabel?.text = "大小方块"
-        } else if (indexPath.row == 1){
+        } else if indexPath.row == 1 {
             cell.textLabel?.text = "瀑布流"
-        } else if (indexPath.row == 2){
+        } else if indexPath.row == 2 {
             cell.textLabel?.text = "Cover Flow"
-        } else if (indexPath.row == 3){
-            cell.textLabel?.text = "追加视图和装饰视图"
+        } else if indexPath.row == 3 {
+            cell.textLabel?.text = "追加视图"
+        } else if indexPath.row == 4 {
+            cell.textLabel?.text = "装饰视图"
         } else {
             cell.textLabel?.text = "其他"
         }
